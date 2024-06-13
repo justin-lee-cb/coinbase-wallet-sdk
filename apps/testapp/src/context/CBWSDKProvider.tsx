@@ -1,6 +1,7 @@
 import { CoinbaseWalletSDK as CoinbaseWalletSDKDev } from '@coinbase/wallet-sdk';
 import { CoinbaseWalletSDK as CoinbaseWalletSDK37 } from '@coinbase/wallet-sdk-3.7';
 import { CoinbaseWalletSDK as CoinbaseWalletSDK39 } from '@coinbase/wallet-sdk-3.9';
+import { CoinbaseWalletSDK as CoinbaseWalletSDKPayments } from '@coinbase/wallet-sdk-testapp';
 import React, { useEffect, useMemo } from 'react';
 
 type CBWSDKProviderProps = {
@@ -10,11 +11,14 @@ type CBWSDKProviderProps = {
 const CBWSDKContext = React.createContext(null);
 const SELECTED_SDK_KEY = 'selected_sdk_version';
 
-export const sdkVersions = ['master', '3.9', '3.7'] as const;
+export const sdkVersions = ['master', 'payments-test', '3.9', '3.7'] as const;
 export type SDKVersionType = (typeof sdkVersions)[number];
 
 const dynamicallyImportSDK = (version: SDKVersionType) => {
   switch (version) {
+    case 'payments-test': {
+      return CoinbaseWalletSDK
+    }
     case 'master': {
       return CoinbaseWalletSDKDev;
     }
