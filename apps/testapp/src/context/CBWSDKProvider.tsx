@@ -16,9 +16,6 @@ export type SDKVersionType = (typeof sdkVersions)[number];
 
 const dynamicallyImportSDK = (version: SDKVersionType) => {
   switch (version) {
-    case 'payments-test': {
-      return CoinbaseWalletSDK
-    }
     case 'master': {
       return CoinbaseWalletSDKDev;
     }

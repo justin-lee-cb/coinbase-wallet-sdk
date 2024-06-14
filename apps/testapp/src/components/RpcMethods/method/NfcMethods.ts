@@ -12,6 +12,8 @@ const requestNfc: RpcRequestInput = {
     { key: 'maxFeePerGas', required: true },
     { key: 'maxPriorityFeePerGas', required: true },
     { key: 'shouldSubmit', required: false },
+    { key: 'data', required: false },
+    { key: 'toAddress', required: true },
   ],
   format: (data: Record<string, string>) => [
     {
@@ -24,6 +26,8 @@ const requestNfc: RpcRequestInput = {
       gasPriceInWei: data.gasPriceInWei,
       maxFeePerGas: data.maxFeePerGas,
       maxPriorityFeePerGas: data.maxPriorityFeePerGas,
+      data: data.data,
+      toAddress: data.toAddress,
     },
   ],
 };

@@ -81,6 +81,7 @@ export function RpcMethodCard({ connected, format, method, params, shortcuts }) 
           response = await provider.hasNFCPayment();
           alert(response);
         } else {
+          console.log({ values, data  });
           response = await provider.request({
             method,
             params: values,
