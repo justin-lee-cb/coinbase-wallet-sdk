@@ -18,5 +18,5 @@ const NfcShortcuts: ShortcutType[] = [
 ];
 
 export const nfcShortcutsMap = {
-  requestNFCPayment: NfcShortcuts,
+  relayNFCPaymentRequest: NfcShortcuts,
 };
