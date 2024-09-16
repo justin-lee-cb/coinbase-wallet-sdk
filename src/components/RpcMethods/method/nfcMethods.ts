@@ -1,7 +1,7 @@
 import { RpcRequestInput } from './RpcRequestInput';
 
-const relayNFCPaymentRequest: RpcRequestInput = {
-  method: 'relayNFCPaymentRequest',
+const requestContactlessPayment: RpcRequestInput = {
+  method: 'requestContactlessPayment',
   params: [
     { key: 'type', required: true },
     { key: 'uri', required: true },
@@ -20,4 +20,4 @@ const hasNfc: RpcRequestInput = {
   format: () => [],
 };
 
-export const nfcMethods = [relayNFCPaymentRequest, hasNfc];
+export const nfcMethods = [requestContactlessPayment, hasNfc];
