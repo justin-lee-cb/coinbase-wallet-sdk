@@ -1,4 +1,4 @@
-import { ShortcutType } from './ShortcutType';
+import { ShortcutType } from '../../../../../../src/components/RpcMethods/shortcut/ShortcutType';
 
 const NfcShortcuts: ShortcutType[] = [
   {
