@@ -1,10 +1,12 @@
 import { Box, Container, Grid, GridItem, Heading } from '@chakra-ui/react';
 import React, { useEffect } from 'react';
 
+import { nfcShortcutsMap } from '../../apps/testapp/src/components/RpcMethods/shortcut/nfcShortcuts';
 import { EventListenersCard } from '../components/EventListeners/EventListenersCard';
 import { WIDTH_2XL } from '../components/Layout';
 import { connectionMethods } from '../components/RpcMethods/method/connectionMethods';
 import { multiChainMethods } from '../components/RpcMethods/method/multiChainMethods';
+import { nfcMethods } from '../components/RpcMethods/method/nfcMethods';
 import { readonlyJsonRpcMethods } from '../components/RpcMethods/method/readonlyJsonRpcMethods';
 import { RpcRequestInput } from '../components/RpcMethods/method/RpcRequestInput';
 import { sendMethods } from '../components/RpcMethods/method/sendMethods';
@@ -80,6 +82,7 @@ export default function Home() {
             methods={readonlyJsonRpcMethods}
             shortcutsMap={readonlyJsonRpcShortcutsMap}
           />
+          <MethodsSection title="NFC" methods={nfcMethods} shortcutsMap={nfcShortcutsMap} />
         </>
       )}
     </Container>
