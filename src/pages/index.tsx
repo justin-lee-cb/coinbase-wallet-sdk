@@ -59,7 +59,7 @@ export default function Home() {
         </Grid>
       </Box>
       <MethodsSection title="Wallet Connection" methods={connectionMethods} />
-      {connected && (
+      {
         <>
           <MethodsSection
             title="Switch/Add Chain"
@@ -84,7 +84,7 @@ export default function Home() {
           />
           <MethodsSection title="NFC" methods={nfcMethods} shortcutsMap={nfcShortcutsMap} />
         </>
-      )}
+      }
     </Container>
   );
 }
