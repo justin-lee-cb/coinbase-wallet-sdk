@@ -10,6 +10,7 @@ const requestContactlessPayment: RpcRequestInput = {
     {
       key: data.key,
       type: data.type,
+      uri: data.uri,
     },
   ],
 };
