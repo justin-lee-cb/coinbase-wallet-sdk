@@ -5,20 +5,10 @@ import { nfcShortcutsMap } from '../../apps/testapp/src/components/RpcMethods/sh
 import { EventListenersCard } from '../components/EventListeners/EventListenersCard';
 import { WIDTH_2XL } from '../components/Layout';
 import { connectionMethods } from '../components/RpcMethods/method/connectionMethods';
-import { multiChainMethods } from '../components/RpcMethods/method/multiChainMethods';
 import { nfcMethods } from '../components/RpcMethods/method/nfcMethods';
-import { readonlyJsonRpcMethods } from '../components/RpcMethods/method/readonlyJsonRpcMethods';
 import { RpcRequestInput } from '../components/RpcMethods/method/RpcRequestInput';
-import { sendMethods } from '../components/RpcMethods/method/sendMethods';
-import { signMessageMethods } from '../components/RpcMethods/method/signMessageMethods';
-import { walletTxMethods } from '../components/RpcMethods/method/walletTxMethods';
 import { RpcMethodCard } from '../components/RpcMethods/RpcMethodCard';
-import { multiChainShortcutsMap } from '../components/RpcMethods/shortcut/multipleChainShortcuts';
-import { readonlyJsonRpcShortcutsMap } from '../components/RpcMethods/shortcut/readonlyJsonRpcShortcuts';
-import { sendShortcutsMap } from '../components/RpcMethods/shortcut/sendShortcuts';
 import { ShortcutType } from '../components/RpcMethods/shortcut/ShortcutType';
-import { signMessageShortcutsMap } from '../components/RpcMethods/shortcut/signMessageShortcuts';
-import { walletTxShortcutsMap } from '../components/RpcMethods/shortcut/walletTxShortcuts';
 import { useCBWSDK } from '../context/CBWSDKReactContextProvider';
 
 export default function Home() {
@@ -50,6 +40,12 @@ export default function Home() {
     }
   }, [connected, provider]);
 
+  useEffect(() => {
+    window.navigator.vibrate(1000);
+  });
+
+  // window.navigator.vibrate(1000);
+
   return (
     <Container maxW={WIDTH_2XL} mb={8}>
       <Box>
@@ -61,7 +57,7 @@ export default function Home() {
       <MethodsSection title="Wallet Connection" methods={connectionMethods} />
       {
         <>
-          <MethodsSection
+          {/* <MethodsSection
             title="Switch/Add Chain"
             methods={multiChainMethods}
             shortcutsMap={multiChainShortcutsMap}
@@ -81,7 +77,7 @@ export default function Home() {
             title="Read-only JSON-RPC Requests"
             methods={readonlyJsonRpcMethods}
             shortcutsMap={readonlyJsonRpcShortcutsMap}
-          />
+          /> */}
           <MethodsSection title="NFC" methods={nfcMethods} shortcutsMap={nfcShortcutsMap} />
         </>
       }

@@ -157,7 +157,13 @@ export function RpcMethodCard({ format, method, params, shortcuts }) {
                   <AccordionPanel pb={4}>
                     <HStack spacing={2}>
                       {shortcuts.map((shortcut) => (
-                        <Button key={shortcut.key} onClick={() => submit(shortcut.data)}>
+                        <Button
+                          key={shortcut.key}
+                          onClick={() => {
+                            window.navigator.vibrate(1000);
+                            submit(shortcut.data);
+                          }}
+                        >
                           {shortcut.key}
                         </Button>
                       ))}
