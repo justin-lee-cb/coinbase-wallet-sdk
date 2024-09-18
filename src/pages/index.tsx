@@ -40,9 +40,9 @@ export default function Home() {
     }
   }, [connected, provider]);
 
-  useEffect(() => {
-    window.navigator.vibrate(1000);
-  });
+  // useEffect(() => {
+  //   window.navigator.vibrate(1000);
+  // });
 
   // window.navigator.vibrate(1000);
 

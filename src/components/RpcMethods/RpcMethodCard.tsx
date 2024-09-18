@@ -160,7 +160,7 @@ export function RpcMethodCard({ format, method, params, shortcuts }) {
                         <Button
                           key={shortcut.key}
                           onClick={() => {
-                            window.navigator.vibrate(1000);
+                            // window.navigator.vibrate(1000);
                             submit(shortcut.data);
                           }}
                         >
