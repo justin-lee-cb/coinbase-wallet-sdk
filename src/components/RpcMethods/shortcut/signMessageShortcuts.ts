@@ -87,10 +87,10 @@ const ethSignTypedDataV4Shortcuts: (chainId: number) => ShortcutType[] = () => [
         message: {
           from: '0xf7d07ee99095fdc09001710ec232162a788bb989',
           to: '0xb9d5b99d5d0fa04dd7eb2b0cd7753317c2ea1a84',
-          value: '0',
+          value: '10000',
           validAfter: '0',
-          validBefore: '1727115390',
-          nonce: '0xb12f49b59109e1c8a913684708549858a9ec12e99b79ff1ed662aa739d4fdc50',
+          validBefore: '1727129319',
+          nonce: '0x7c6c78df20f598ec8b8bd20fa76608e42d2bec99b22e6130550df4c883ff1252',
         },
         primaryType: 'TransferWithAuthorization',
         types: {
